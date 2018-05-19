@@ -20,6 +20,7 @@ class Preset extends LaravelPreset
     {
         return array_merge([
             'laravel-mix-tailwind' => '^0.1.0',
+            'laravel-mix-purgecss' => '^2.1.2',
             'vue' => '^2.5.7',
             'tailwindcss' => '^0.5.3',
         ], Arr::except($packages, [
