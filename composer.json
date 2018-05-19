@@ -1,0 +1,26 @@
+{
+    "name": "agencms/laravel-preset",
+    "description": "Front-end preset for Agencms if you wish to use the default views and templates",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Mark",
+            "email": "m2de@outlook.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Agencms\\LaravelPreset\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Agencms\\LaravelPreset\\AgencmsServiceProvider"]
+        }
+    }
+}
