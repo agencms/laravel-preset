@@ -10,7 +10,9 @@
             <meta name="csrf-token" content="{{ csrf_token() }}">
         @show
 
-        <title>@yield('title')</title>
+        @section('title')
+            @render(\Agencms\Core\Components\Title::class)
+        @show
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @show
