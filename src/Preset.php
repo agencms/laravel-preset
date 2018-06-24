@@ -40,6 +40,10 @@ class Preset extends LaravelPreset
 
     public static function updateViews()
     {
+        File::cleanDirectory(resource_path('views'));
+
+        mkdir(resource_path('views/layouts'));
+
         copy(
             __DIR__.'/stubs/views/layouts/default.blade.php',
             resource_path('views/layouts/default.blade.php')
