@@ -10,11 +10,12 @@ class Preset extends LaravelPreset
 {
     public static function install()
     {
-        static::updatePackages();
         static::updateMix();
         static::updateViews();
-        static::updateScripts();
+        static::updateRoutes();
         static::updateStyles();
+        static::updateScripts();
+        static::updatePackages();
     }
 
     public static function updatePackageArray($packages)
@@ -36,6 +37,11 @@ class Preset extends LaravelPreset
     {
         copy(__DIR__.'/stubs/webpack.mix.js', base_path('webpack.mix.js'));
         copy(__DIR__.'/stubs/tailwind.js', base_path('tailwind.js'));
+    }
+
+    public static function updateRoutes()
+    {
+        copy(__DIR__.'/stubs/routes/web.php', base_path('routes/web.php'));
     }
 
     public static function updateViews()
