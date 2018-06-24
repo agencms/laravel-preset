@@ -22,9 +22,9 @@ class Preset extends LaravelPreset
     {
         return array_merge([
             'laravel-mix-tailwind' => '^0.1.0',
-            'laravel-mix-purgecss' => '^2.1.2',
-            'vue' => '^2.5.7',
-            'tailwindcss' => '^0.5.3',
+            'laravel-mix-purgecss' => '^2.2.0',
+            'vue' => '^2.5.16',
+            'tailwindcss' => '^0.6.1',
         ], Arr::except($packages, [
             'popper.js',
             'lodash',
